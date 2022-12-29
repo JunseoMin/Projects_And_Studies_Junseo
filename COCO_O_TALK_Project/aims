@@ -1,0 +1,50 @@
+2022.12.29~
+
+목표
+채팅어플에 부가적 기능을 가진 어플 만들기.
+준서
+-	대학생이 팀 프로젝트 할 때 쓰기 편한 어플을 만들고 싶음.
+-	깃허브, vs등 팀프로젝트를 한 개의 서버에 저장해서 여러명이 같이 작업이 가능했으면 함.
+-	API, NetWork작업을 해보려는 목표 있음. Java와 Cpp등등 여러가지 언어를 함께 사용해보고 호환시키는 작업 원함.
+
+구현 계획
+
+0. 언어 선정
+-Cpp, java? Python?
+- java script는 기성 프로그램들이 많아서 참고하기 좋음. (controller class 상속해서 구현한 코드가 많음) html, css 접근이 쉬울수록 좋아서 javascript가 좋을 것 같음. – 근데 이 언어 잘 모름..
+- cpp는 만들 수는 있겠지만 시간소요 매우 길 듯? Python은 만들면 너무 쉽게 만들 듯
+
+1. 클론코딩 
+web에서 그대로 가져옴, 실제 application 구현에는 무리 있음.
+Front 작업에만 의미 있음.
+Compiler 작업 시 web link연결 할 수 있을 듯?
+- 카카오톡 (talk application 아무거나)
+- VS code 등 (코딩 compiler환경) =>web compiler도 사용할 만함.
+
+2. 실제구현.
+API구현, Front 구현, 적절한 Algorithm선정
+Back 구현할 때는 memory 사용 최적화목표로.
+- front: 기성 talk application에서 가져오고, 수정하는 방향.
+	code에 접근이 쉽도록 구현
+	chat할동안 서로의 chat에 소통이 용이하도록 구현.
+	javascript에서는 기본 UI구성할 수 있는 class 있음. 근데 함 짜보자.
+	-> class 주석 읽으면서 class내부 구현부 확인하고 구현하기.
+
+- back: open API에서 사용가능한 모델 기준으로 구현
+       자료구조 선정 필요 (heap구조?)
+	os환경은 window로 정하고 구현하기.
+	가상서버 구현 -> login기능 넣기.
+	기타 기능들 고려 후 결정.
+	API, Network 지식 필요.
+	Language 선정은 Korean, English (Korean-> chat, English-> codes)
+	다대다 client server는 code공유, chat 전송
+	Login 기능에서 이름선정 password는 chatt 내부, 사용자 login시 사용
+	I/O Stream 구현
+	Thread 구현 (interrupt)
+	Network, Socket 이해하기.
+	Cloud API 사용하기.
+
+3. 디자인
+Front 작업하면서 한번에 정하기
+
+4. 배포
