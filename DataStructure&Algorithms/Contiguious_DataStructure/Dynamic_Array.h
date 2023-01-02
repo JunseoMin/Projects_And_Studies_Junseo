@@ -1,18 +1,26 @@
 #pragma once
-// Dynamic Array Class ±¸ÇöÇÏ±â
+// Dynamic Array Class êµ¬í˜„í•˜ê¸°
 // header file
 template<typename T>
 class Dynamic_Array
 {
+	friend Dynamic_Array<T> operator+ (const Dynamic_Array<T>& arr1,const Dynamic_Array<T>& arr2);
+	//friend ë¡œ êµ¬í˜„ì‹œ ì„ ì–¸ë¶€ì—ì„œë§Œ friendì„ ì–¸
+	//friendëŠ” í´ë˜ìŠ¤ ë‚´ë¶€í•¨ìˆ˜ë¡œ ë°˜ì˜ë˜ì§€ ì•ŠìŒ
 public:
-	Dynamic_Array(int data_size);								 // »ç¿ëÀÚ·ÎºÎÅÍ sizeÀÔ·Â¹ŞÀ½(sizeÇÒ´ç)
-	Dynamic_Array(const Dynamic_Array<T>& array); // copy constructor
+	Dynamic_Array(int data_size);								 // ì‚¬ìš©ìë¡œë¶€í„° sizeì…ë ¥ë°›ìŒ(sizeí• ë‹¹)
+	Dynamic_Array(Dynamic_Array<T>& array);			// copy constructor
 	~Dynamic_Array();													 // distructor
 
-	T& operator[] (const int& index);						// index°ª ÂüÁ¶
-	const T& operator[] (const int& index) const;	// index °ª ÂüÁ¶ const
-	T& at(const int index);									// array classÀÇ at±¸Çö
-	size_t size();										// array size ¹İÈ¯
+	T& operator[] (const int& index);						// indexê°’ ì°¸ì¡°
+	const T& operator[] (const int& index) const;	// index ê°’ ì°¸ì¡° const
+	T& at(const int index);									// array classì˜ atêµ¬í˜„
+	size_t size();										// array size ë°˜í™˜
+	T& begin();
+	const T& begin()const;
+	T& end();
+	const T& end()const;
+	std::string to_string(const std::string& sep=" , ");		//ì„ ì–¸ë¶€ì—ì„œ std í´ë˜ìŠ¤ ì‚¬ìš©ì‹œì—ëŠ” namespace ëª…ì‹œ
 
 private:
 	T* data_ptr;
