@@ -1,0 +1,18 @@
+public class A03_Liter {
+    public static void main(String[] args) {
+        //
+        //
+        int a = 500; // 정수상수
+        float b = 3.4f; // 실수상수
+        double c = 3.14; // 실수상수
+        char d = 'X';// 문자상수
+        String e = "java hello"; // 문자열
+
+        
+
+        final int j;
+        System.out.println();
+    }
+
+
+}
